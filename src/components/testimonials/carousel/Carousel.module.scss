@@ -1,0 +1,75 @@
+@use "../../../sass/colors";
+
+.carousel {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  animation: scrollToLeft 30s linear infinite;
+}
+.reverse {
+  display: flex;
+  animation: scrollToRight 30s linear infinite;
+}
+@keyframes scrollToLeft {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+@keyframes scrollToRight {
+  from {
+    translate: -100%;
+  }
+  to {
+    translate: 0;
+  }
+}
+.card {
+  height: 10rem;
+  width: 20rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 0.01rem solid colors.$primary;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userName {
+  color: colors.$grey;
+  font-size: 0.9rem;
+}
+.description {
+  width: 99%;
+  color: colors.$grey;
+  display: -webkit-box;
+  font-size: 0.9rem;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

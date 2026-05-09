@@ -1,0 +1,148 @@
+@use "../../sass/colors";
+
+.featureSection {
+  background-color: colors.$black;
+  color: colors.$white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+/* Shared flex column pattern */
+.featureContainer,
+.right,
+.rightDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centered flex row */
+.featureCards,
+.featureContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureCards {
+  padding-block: 4rem;
+  gap: 2rem;
+}
+
+.featureContainer {
+  gap: 3rem;
+  padding-block: 2rem;
+}
+
+.featureDescription {
+  width: 67%;
+}
+
+.featureContent {
+  align-items: stretch;
+  gap: 3rem;
+}
+
+.left {
+  flex: 6.7;
+  position: relative;
+  z-index: 0;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  background-color: colors.$primary;
+  height: 10rem;
+  width: 10rem;
+  filter: blur(7rem);
+  z-index: -1;
+}
+/* Shared figure base */
+.left figure,
+.right figure {
+  width: 100%;
+  border-radius: 1rem;
+  position: relative;
+  border: 0.01rem solid transparent;
+}
+
+/* Shared image base */
+.left img,
+.right img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.left img {
+  border-radius: 1rem;
+}
+
+.right {
+  gap: 2rem;
+  flex: 3.3;
+}
+
+.right figure {
+  padding: 3rem 0 0 3rem;
+  background:
+    linear-gradient(to bottom, colors.$black, colors.$primary) padding-box,
+    linear-gradient(175deg, colors.$primary, colors.$primary, colors.$black)
+      border-box;
+  border: 0.05rem solid transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.left figure::before,
+.right figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.05rem;
+  border-radius: 1rem;
+
+  mask:
+    linear-gradient(colors.$white 0 0) content-box,
+    linear-gradient(colors.$white 0 0);
+  mask-composite: exclude;
+}
+
+.left figure::before {
+  background: linear-gradient(
+    195deg,
+    colors.$primary,
+    colors.$primary,
+    transparent,
+    colors.$black
+  );
+}
+
+.right img {
+  display: block;
+  border-top-left-radius: 1rem;
+}
+
+.rightDesc {
+  gap: 1rem;
+}
+
+.featureText {
+  font-size: 1.4rem;
+}
+
+.featureSubtitle {
+  font-size: 0.9rem;
+}
+
+.featureLink {
+  font-size: 0.8rem;
+  color: colors.$primary;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}

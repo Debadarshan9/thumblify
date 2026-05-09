@@ -1,0 +1,28 @@
+@use "../../sass/colors";
+
+.testimonialSection {
+  background-color: colors.$black;
+  color: colors.$white;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  padding-block: 2rem;
+}
+.carousel {
+  width: 90%;
+  margin-block: 2rem;
+  position: relative;
+}
+.carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    colors.$black,
+    transparent,
+    transparent,
+    colors.$black
+  );
+}

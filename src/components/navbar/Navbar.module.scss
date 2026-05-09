@@ -1,0 +1,72 @@
+@use "../../sass/colors";
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(0.6rem);
+  color: colors.$white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+}
+// left
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  padding: 0.2rem 0.6rem;
+  height: 24;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: larger;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+// Middle
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  li {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  li:after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 0%;
+    height: 0.1rem;
+    background-color: colors.$primary;
+    transition: width 0.3s linear;
+  }
+  li:hover {
+    color: colors.$primary;
+  }
+  li:hover::after {
+    width: 100%;
+  }
+}
+
+// Right
+.right > button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: colors.$primary;
+  color: colors.$white;
+  font-size: 1rem;
+  font-weight: bold;
+}

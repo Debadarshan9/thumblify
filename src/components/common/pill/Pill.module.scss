@@ -1,0 +1,9 @@
+@use "../../../sass/colors";
+
+.pill {
+  padding: 0.5rem 4rem;
+  background-color: colors.$primary-translucent;
+  color: colors.$white;
+  border: 0.01rem solid colors.$primary;
+  border-radius: 4rem;
+}

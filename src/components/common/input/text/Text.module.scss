@@ -1,0 +1,37 @@
+@use "../../../../sass/colors";
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  color: colors.$white;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+textarea {
+  background-color: transparent;
+  color: colors.$white;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  resize: none;
+  width: 100%;
+}
+.input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0.01rem solid colors.$accent-blue-soft;
+  border-radius: 0.4rem;
+  padding: 1rem 0.5rem;
+}
+.input:focus-within {
+  border: 0.01rem solid colors.$primary;
+}

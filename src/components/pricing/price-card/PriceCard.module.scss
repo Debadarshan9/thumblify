@@ -1,0 +1,72 @@
+@use "../../../sass/colors";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: colors.$primary-translucent-light;
+  border: 0.01rem solid colors.$primary;
+  border-radius: 0.5rem;
+  height: fit-content;
+  padding: 2rem 2rem 4rem;
+  position: relative;
+}
+.pill {
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+}
+.overrideCss {
+  background-color: colors.$secondary;
+  padding-inline: 1rem;
+  border: none;
+}
+.popular {
+  background-color: colors.$primary-translucent-strong;
+  border: none;
+}
+.top {
+  text-align: center;
+}
+.planCategory {
+  font-weight: bold;
+}
+.planPrice {
+  color: colors.$grey;
+}
+.highlight {
+  color: colors.$white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.accessItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.check {
+  color: colors.$primary;
+  stroke-width: 0.3rem;
+}
+
+.button {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: colors.$primary;
+  color: colors.$white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.popularButton {
+  background-color: colors.$white;
+  color: colors.$primary;
+}

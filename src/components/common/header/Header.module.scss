@@ -1,0 +1,19 @@
+.header {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-block: 0 1rem;
+}
+.headerTitle {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-block: 2rem 1rem;
+}
+
+.headerSubtitle {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
