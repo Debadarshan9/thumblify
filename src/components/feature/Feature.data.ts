@@ -1,18 +1,21 @@
+import { Blend, ThumbsUp, Zap } from "lucide-react";
 export const featureData = [
   {
-    icon: "L",
-    title: "Lightning-fast setup",
+    icon: Zap,
+    title: "Smart Analysis",
     subtitle:
-      "Launch production-ready pages in minutes with prebuilt components.",
+      "Our AI analyzes your video content to suggest the most clickable concepts.",
   },
   {
-    icon: "P",
-    title: "Pixel perfect",
-    subtitle: "Modern Figma-driven UI that translates to exact code.",
+    icon: ThumbsUp,
+    title: "Eye-Catching designs",
+    subtitle:
+      "Generate vibrant, high-contrast thumbnails that stand out in the feed.",
   },
   {
-    icon: "H",
-    title: "Highly customizable",
-    subtitle: "Tailwind utility-first classes make customization trivial.",
+    icon: Blend,
+    title: "Fully Editable",
+    subtitle:
+      "Get fully layered designs that you can tweak to perfection if needed.",
   },
 ];

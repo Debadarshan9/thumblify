@@ -1,23 +1,24 @@
-import Feature from "./components/feature/Feature";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
-import Testimonial from "./components/testimonials/Testimonial";
 import "./App.css";
-import Pricing from "./components/pricing/Pricing";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
 import LenisScroll from "./components/lenisScroll/LenisScroll";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Generate from "./pages/Generate";
+import MyGeneration from "./pages/MyGeneration";
+import YtPreview from "./pages/YtPreview";
+import Layout from "./layout/Layout";
 function App() {
   return (
     <div className="app">
       <LenisScroll />
-      <Navbar />
-      <Hero />
-      <Feature />
-      <Testimonial />
-      <Pricing />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/generation" element={<Generate />} />
+          <Route path="/generation/:id" element={<Generate />} />
+          <Route path="/my-generation" element={<MyGeneration />} />
+          <Route path="/preview" element={<YtPreview />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

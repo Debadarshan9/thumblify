@@ -10,13 +10,13 @@ const Feature = () => {
     <div className={style.featureSection}>
       <Header
         headerName="Feature"
-        headerTitle="What you get"
-        headerSubtitle="Components, patterns and pages — everything you need to ship."
+        headerTitle="Why use our generator?"
+        headerSubtitle="Create stunning thumbnails that drive clicks without the hassle."
       />
       <div className={style.featureCards}>
-        {featureData.map((card) => (
+        {featureData.map((card, index) => (
           <Card
-            key={card.icon}
+            key={index}
             icon={card.icon}
             title={card.title}
             subtitle={card.subtitle}
@@ -26,8 +26,8 @@ const Feature = () => {
       {/* 2nd part */}
       <div className={style.featureContainer}>
         <div className={style.featureDescription}>
-          PrebuiltUI helps you build faster by transforming your design vision
-          into fully functional, production-ready UI components.
+          Our AI understands what makes a video go viral and designs thumbnails
+          accordingly
         </div>
         <div className={style.featureContent}>
           <div className={style.left}>
@@ -41,14 +41,14 @@ const Feature = () => {
             </figure>
             <div className={style.rightDesc}>
               <span className={style.featureText}>
-                Better design with highest revenue and profits
+                Boost your views with AI-optimized designs
               </span>
               <span className={style.featureSubtitle}>
-                PrebuiltUI empowers you to build beautifully and scale
-                effortlessly.
+                Stop guessing and start ranking. Our AI creates design proven to
+                capture attention.
               </span>
               <span className={style.featureLink}>
-                Learn more about the product Testimonials <ArrowUpRight />
+                Start generating free <ArrowUpRight />
               </span>
             </div>
           </div>

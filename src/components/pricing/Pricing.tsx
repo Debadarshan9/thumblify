@@ -7,8 +7,8 @@ const Pricing = () => {
     <div className={style.pricingContainer}>
       <Header
         headerName="Pricing"
-        headerTitle="Our Pricing Plans"
-        headerSubtitle="Flexible pricing options designed to meet your needs - whether you're just getting started or scaling up."
+        headerTitle="Simple pricing"
+        headerSubtitle="Choose the plan that fits your creation schedule, Cancel anytime."
       />
       <div className={style.priceCards}>
         {PricingData.map((data, index) => (

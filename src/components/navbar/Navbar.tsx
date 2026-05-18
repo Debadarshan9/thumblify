@@ -1,24 +1,34 @@
 import style from "./Navbar.module.scss";
 import logo from "../../assets/logo.png";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className={style.navContainer}>
-      <div className={style.left}>
+      <Link to="/" className={style.left}>
         <span className={style.logo}>
           <img src={logo} height={40} alt="Thumblify Logo" />
         </span>
         <span className={style.title}>Thumblify</span>
-      </div>
+      </Link>
       <div className={style.middle}>
         <ul className={style.navLinks}>
-          <li>Home</li>
-          <li>Generate</li>
-          <li>my Generation</li>
-          <li>My Contact</li>
+          <Link to="/" className={style.link}>
+            Home
+          </Link>
+          <Link to="/generation" className={style.link}>
+            Generate
+          </Link>
+          <Link to="/my-generation" className={style.link}>
+            my Generation
+          </Link>
+          <Link to="/#contact" className={style.link}>
+            My Contact
+          </Link>
         </ul>
       </div>
       <div className={style.right}>
-        <button>Get Started</button>
+        <button onClick={() => navigate("/login")}>Get Started</button>
       </div>
     </nav>
   );

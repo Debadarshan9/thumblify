@@ -2,13 +2,24 @@ import { ArrowRight, Mail, UserIcon } from "lucide-react";
 import Header from "../common/header/Header";
 import TextFieldComponent from "../common/input/text/Text";
 import style from "./Contact.module.scss";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 const Contact = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#contact") {
+      const element = document.getElementById("contact");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location.hash]);
   return (
-    <div className={style.contactContainer}>
+    <div className={style.contactContainer} id="contact">
       <Header
         headerName="Contact"
-        headerTitle="Reach out to us"
-        headerSubtitle="Ready to grow your brand? Let's connect and build something exceptional together."
+        headerTitle="Grow your channel"
+        headerSubtitle="Have questions about our AI? Ready to scale your views? Let's talk."
       />
       <div className={style.formContainer}>
         <div className={style.inputWrapper}>

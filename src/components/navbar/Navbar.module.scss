@@ -17,6 +17,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 .logo {
   padding: 0.2rem 0.6rem;
@@ -27,6 +29,7 @@
   font-size: larger;
   font-weight: bold;
   letter-spacing: 0.2rem;
+  color: colors.$white;
 }
 
 // Middle
@@ -34,14 +37,16 @@
   display: flex;
   list-style: none;
   gap: 1.5rem;
-  li {
+  .link {
     position: relative;
     text-transform: capitalize;
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    text-decoration: none;
+    color: colors.$white;
   }
-  li:after {
+  .link:after {
     content: "";
     position: absolute;
     bottom: -0.2rem;
@@ -51,10 +56,10 @@
     background-color: colors.$primary;
     transition: width 0.3s linear;
   }
-  li:hover {
+  .link:hover {
     color: colors.$primary;
   }
-  li:hover::after {
+  .link:hover::after {
     width: 100%;
   }
 }
