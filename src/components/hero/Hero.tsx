@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   const specialSkills = [
-    "no design skills needed",
+    "No design skills needed",
     "Fast generation",
     "High CTR templates",
   ];

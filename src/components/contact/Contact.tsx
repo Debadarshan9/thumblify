@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 const Contact = () => {
   const location = useLocation();
-  console.log(location.hash);
   useEffect(() => {
     if (location.hash === "#contact") {
       const element = document.getElementById("contact");
