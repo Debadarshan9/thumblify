@@ -9,6 +9,10 @@
   display: flex;
   gap: 5rem;
 }
+.logo {
+  display: inline;
+  max-height: 4rem;
+}
 .products :not(:first-child),
 .resources :not(:first-child),
 .legal :not(:first-child) {
@@ -35,4 +39,7 @@
   align-items: center;
   justify-content: end;
   gap: 0.5rem;
+}
+.icons > :hover {
+  color: colors.$primary;
 }

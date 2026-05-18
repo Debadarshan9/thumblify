@@ -3,13 +3,15 @@ import style from "./Footer.module.scss";
 import Linkedin from "../common/svg/Linkedin";
 import Youtube from "../common/svg/Youtube";
 import Twitter from "../common/svg/Twitter";
+import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className={style.footerContainer}>
       <div className={style.left}>
-        {/* <div className={style.logo}>
-
-        </div> */}
+        <Link to="/">
+          <img className={style.logo} src={logo} alt="favicon" />
+        </Link>
         <div className={style.products}>
           <div>Product</div>
           <div>Home</div>
