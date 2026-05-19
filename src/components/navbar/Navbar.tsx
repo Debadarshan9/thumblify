@@ -1,6 +1,7 @@
 import style from "./Navbar.module.scss";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import Button from "../common/button/Button";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
           <Link to="/" className={style.link}>
             Home
           </Link>
-          <Link to="/generation" className={style.link}>
+          <Link to="/generate" className={style.link}>
             Generate
           </Link>
           <Link to="/my-generation" className={style.link}>
@@ -28,7 +29,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={style.right}>
-        <button onClick={() => navigate("/login")}>Get Started</button>
+        <Button
+          text="Get Started"
+          variant="contained"
+          handleClick={() => navigate("/login")}
+          rounded
+        />
       </div>
     </nav>
   );

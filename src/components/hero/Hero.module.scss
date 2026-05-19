@@ -55,27 +55,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  button {
-    border-width: 0.1rem;
-    border-style: solid;
-    border-radius: 2rem;
-    color: colors.$white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding-inline: 2rem;
-  }
-}
-.primaryBtn {
-  background-color: colors.$primary;
-  padding-block: 1rem;
-}
-.secondaryBtn {
-  background-color: transparent;
-  border-color: colors.$primary;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding-block: 0.8rem;
 }
 
 .heroFeatures {
