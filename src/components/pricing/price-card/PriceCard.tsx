@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { classes } from "../../../utils/utils";
 import Pill from "../../common/pill/Pill";
 import style from "./PriceCard.module.scss";
+import Button from "../../common/button/Button";
 type PriceCardProps = {
   planName: string;
   price: number;
@@ -36,11 +37,12 @@ const PriceCard = ({
         ))}
       </div>
       <div className={style.bottom}>
-        <button
-          className={classes(style.button, isPopular && style.popularButton)}
-        >
-          Get Started
-        </button>
+        <Button
+          text="Get Started"
+          variant="contained"
+          fullWidth
+          className={isPopular ? style.popularButton : ""}
+        />
       </div>
     </div>
   );

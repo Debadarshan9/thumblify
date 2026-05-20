@@ -4,6 +4,7 @@ import TextFieldComponent from "../common/input/text/Text";
 import style from "./Contact.module.scss";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Button from "../common/button/Button";
 const Contact = () => {
   const location = useLocation();
   useEffect(() => {
@@ -45,9 +46,12 @@ const Contact = () => {
           placeholder="Enter your message"
           multiline={8}
         />
-        <button className={style.submitBtn}>
-          Submit <ArrowRight size={24} />
-        </button>
+        <Button
+          text="Submit"
+          variant="contained"
+          rounded
+          endIcon={ArrowRight}
+        />
       </div>
     </div>
   );

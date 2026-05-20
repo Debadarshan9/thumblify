@@ -1,0 +1,67 @@
+@use "../../sass/colors";
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80svh;
+  position: relative;
+  z-index: 0;
+}
+.loginContainer::before {
+  content: "";
+  position: absolute;
+  top: 5rem;
+  left: 10%;
+  width: 50rem;
+  height: 25rem;
+  background: linear-gradient(
+    to top right,
+    colors.$primary-subtle,
+    transparent
+  );
+  border-radius: 50rem;
+  filter: blur(6rem);
+  z-index: -1;
+}
+
+.loginContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 5rem;
+  right: 10%;
+  width: 60rem;
+  height: 20rem;
+  background: linear-gradient(
+    to top left,
+    colors.$primary-translucent,
+    transparent
+  );
+  border-radius: 40rem;
+  filter: blur(6rem);
+  z-index: -1;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: colors.$surface-light;
+  border: 0.01rem solid colors.$surface-medium;
+  border-radius: 1rem;
+  padding: 2rem;
+  min-width: 25%;
+}
+
+.inputWrapper {
+  width: 100%;
+}
+
+.clickHere {
+  color: colors.$primary;
+  cursor: pointer;
+}
+.clickHere:hover {
+  text-decoration: underline;
+}
