@@ -16,7 +16,7 @@
 .products :not(:first-child),
 .resources :not(:first-child),
 .legal :not(:first-child) {
-  color: colors.$grey;
+  color: colors.$grey-light;
 }
 
 .products,
@@ -32,7 +32,7 @@
   gap: 1rem;
   text-align: right;
   width: 20%;
-  color: colors.$grey;
+  color: colors.$grey-light;
 }
 .icons {
   display: flex;

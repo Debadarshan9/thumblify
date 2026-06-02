@@ -59,12 +59,12 @@
   object-fit: cover;
 }
 .userName {
-  color: colors.$grey;
+  color: colors.$grey-light;
   font-size: 0.9rem;
 }
 .description {
   width: 99%;
-  color: colors.$grey;
+  color: colors.$grey-light;
   display: -webkit-box;
   font-size: 0.9rem;
   line-clamp: 3;

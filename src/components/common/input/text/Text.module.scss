@@ -28,10 +28,10 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 0.01rem solid colors.$accent-blue-soft;
+  border: 0.01rem solid colors.$surface-medium;
   border-radius: 0.4rem;
   padding: 1rem 0.5rem;
 }
 .input:focus-within {
-  border: 0.01rem solid colors.$primary;
+  border-color: colors.$primary;
 }

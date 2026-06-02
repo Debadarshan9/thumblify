@@ -2,7 +2,7 @@ import "./App.css";
 import LenisScroll from "./components/lenisScroll/LenisScroll";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Generate from "./pages/Generate";
+import Generate from "./pages/generate/Generate";
 import MyGeneration from "./pages/MyGeneration";
 import YtPreview from "./pages/YtPreview";
 import Layout from "./layout/Layout";
