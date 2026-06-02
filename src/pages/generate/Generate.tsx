@@ -16,7 +16,7 @@ const Generate = () => {
   const [colorSchemeId, setColorSchemeId] = useState<string>(
     colorSchemes[0].id,
   );
-  const [thumbnail, setThumbnail] = useState(null);
+  // const [thumbnail, setThumbnail] = useState(null);
 
   const [thumbStyle, setThumbStyle] = useState("Bold & Graphic");
   const [styleDropdownOpen, setStyleDropdownOpen] = useState<boolean>(false);
@@ -80,6 +80,13 @@ const Generate = () => {
               <Button
                 text={loading ? "Generating..." : "Generate Thumbnail"}
                 fullWidth
+                disabled={loading}
+                handleClick={() => {
+                  setLoading(true);
+                  setTimeout(() => {
+                    setLoading(false);
+                  }, 2000);
+                }}
               />
             )}
           </div>
