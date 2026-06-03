@@ -31,8 +31,6 @@ const StyleSelector = ({
     "Tech/Futuristic": <CpuIcon />,
   };
 
-  console.log("Selected Style:", value);
-
   return (
     <div className={style.container}>
       <div>Thumbnail Style</div>

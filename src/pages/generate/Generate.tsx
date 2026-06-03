@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Button from "../../components/common/button/Button";
 import SoftBackdrop from "../../components/common/soft-backdrop/SoftBackdrop";
 import style from "./Generate.module.scss";
@@ -11,11 +11,12 @@ import StyleSelector from "../../components/styleSelecctor/StyleSelector";
 const Generate = () => {
   const { id } = useParams();
   const [title, setTitle] = useState<string>("");
-  const [additionaDetails, setAdditionalDetails] = useState<string>("");
+  const [additionalDetails, setAdditionalDetails] = useState<string>("");
   const [aspectRatio, setAspectRatio] = useState<string>("16:9");
   const [colorSchemeId, setColorSchemeId] = useState<string>(
     colorSchemes[0].id,
   );
+  // TODO: Add thumbnail state to display generated thumbnail on the right side --> Will implement latter
   // const [thumbnail, setThumbnail] = useState(null);
 
   const [thumbStyle, setThumbStyle] = useState("Bold & Graphic");
@@ -23,7 +24,7 @@ const Generate = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   return (
-    <>
+    <Fragment>
       <SoftBackdrop />
       <div className={style.generateContainer}>
         <div className={style.contentWrapper}>
@@ -69,7 +70,7 @@ const Generate = () => {
                   label="Additional Details (Optional)"
                   placeholder="Add any specific elements, moods, or style preferences..."
                   multiline={4}
-                  value={additionaDetails}
+                  value={additionalDetails}
                   onChange={(e) => setAdditionalDetails(e.target.value)}
                   className={style.textArea}
                 />
@@ -94,7 +95,7 @@ const Generate = () => {
           <div className={style.rightSection}>This is right side</div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 
