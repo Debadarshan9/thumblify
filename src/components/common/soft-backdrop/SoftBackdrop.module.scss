@@ -1,0 +1,39 @@
+@use "../../../sass/colors";
+.backdrop {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blurOne,
+.blurTwo {
+  position: absolute;
+  filter: blur(6rem);
+}
+
+.blurOne {
+  top: 5rem;
+  left: 10%;
+  width: 60rem;
+  height: 25rem;
+  background: linear-gradient(
+    to top right,
+    colors.$primary-translucent,
+    transparent
+  );
+  border-radius: 40rem;
+}
+
+.blurTwo {
+  bottom: 5rem;
+  right: 5%;
+  width: 40rem;
+  height: 15rem;
+  background: linear-gradient(
+    to top left,
+    colors.$primary-translucent-strong,
+    transparent
+  );
+  border-radius: 40rem;
+}

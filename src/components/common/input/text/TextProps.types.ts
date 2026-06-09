@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { ChangeEvent } from "react";
 
 export type TextProps = {
   label: string;
@@ -6,4 +7,8 @@ export type TextProps = {
   type?: string;
   icon?: LucideIcon | undefined;
   multiline?: number;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  maxLength?: number;
+  className?: string;
 };
